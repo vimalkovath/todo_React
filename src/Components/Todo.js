@@ -1,13 +1,10 @@
-import React, { useState,useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { TodoContext } from "../TodoContext";
 import List from './List';
 
 export default function Todo(props) {
 
-    // const [list, setList] = useState([1, 2]);
-
-
-    const [list,setList] = useContext(TodoContext);
+    const [list, setList] = useContext(TodoContext);
     const [value, setValue] = useState("");
 
     const handleChange = (e) => {
@@ -27,9 +24,8 @@ export default function Todo(props) {
 
                 <button onClick={handleSubmit}>Text</button>
             </div>
-
-
-         <List/>
+            
+            <List />
 
         </>
     );
